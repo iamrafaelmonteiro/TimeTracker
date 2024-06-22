@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Time Tracker</h1>
+        </header>
+        <main>
+            <p>This tool helps you track the time spent on different tasks.</p>
+            <div class="controls">
+                <input type="text" id="task-text" placeholder="Task description">
+                <select id="task-select">
+                    <option value="Meeting">Meeting</option>
+                    <option value="Development">Development</option>
+                    <option value="Analysis">Analysis</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Bug Resolution">Bug Resolution</option>
+                    <option value="Client meetings">Client meetings</option>
+                    <option value="Database Management">Database Management</option>
+                    <option value="Design">Design</option>
+                    <option value="DevOps / Release Management">DevOps / Release Management</option>
+                    <option value="Documentation">Documentation</option>
+                    <option value="Internal Meeting">Internal Meeting</option>
+                    <option value="Investment / Client relationship">Investment / Client relationship</option>
+                    <option value="Pre Sales / Proposal Preparation">Pre Sales / Proposal Preparation</option>
+                    <option value="Project Management">Project Management</option>
+                    <option value="Quality Assurance / Unit Test">Quality Assurance / Unit Test</option>
+                    <option value="Requirements Gathering / Analysis">Requirements Gathering / Analysis</option>
+                    <option value="Scrum Meetings">Scrum Meetings</option>
+                    <option value="Software Development / Refactor">Software Development / Refactor</option>
+                    <option value="Training">Training</option>
+                    <option value="User Interface & Experience (UI/UX) Design">User Interface & Experience (UI/UX) Design</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button id="start-btn">Start</button>
+                <button id="stop-btn" disabled>Stop</button>
+            </div>
+            <h2>Interval History</h2>
+            <ul id="interval-list"></ul>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <a href="#" id="privacy-policy-link">Privacy Policy</a> | 
+            <a href="https://www.linkedin.com/in/rafael-monteiro-9968b923/" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/seurepositorio" target="_blank">GitHub Repository</a>
+        </div>
+    </footer>
+    <button id="clear-btn" class="floating-btn">Clear Data</button>
+
+    <!-- Modal Background -->
+    <div class="modal-background" id="modal-background"></div>
+    
+    <!-- Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Privacy Policy</h2>
+                <span id="modal-close" class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p><strong>Introduction</strong></p>
+                <p>Welcome to Time Tracker! This Privacy Policy explains how we collect, use, and protect your information when you use our tool. Time Tracker is a non-profit project developed to help you monitor the time spent on different tasks.</p>
+                
+                <p><strong>Information Collection</strong></p>
+                <p>Our site collects only the following information:</p>
+                <ul>
+                    <li><strong>Task Description:</strong> The description you provide for each task.</li>
+                    <li><strong>Time Intervals:</strong> The time you log while working on a specific task.</li>
+                </ul>
+                <p>This information is stored locally in your browser using <code>localStorage</code> and is not transmitted or stored on external servers.</p>
+                
+                <p><strong>Use of Information</strong></p>
+                <p>The collected information is used exclusively for:</p>
+                <ul>
+                    <li><strong>Time Monitoring:</strong> Helping you keep track of the time spent on different tasks.</li>
+                    <li><strong>Displaying History:</strong> Showing a history of the logged time intervals.</li>
+                </ul>
+                
+                <p><strong>Information Sharing</strong></p>
+                <p>We do not share your information with third parties. All data remains in your browser and is accessible only by you.</p>
+                
+                <p><strong>Data Storage</strong></p>
+                <p>The data is stored locally in your browser using <code>localStorage</code>. You can delete all stored data at any time by clicking the "Clear Data" button on our site.</p>
+                
+                <p><strong>Security</strong></p>
+                <p>Our site does not collect sensitive data. However, we take precautions to protect the information you provide. Since the data is stored locally in your browser, security also depends on your device's settings and security practices.</p>
+                
+                <p><strong>Cookies</strong></p>
+                <p>We do not use cookies to collect information about users.</p>
+                
+                <p><strong>Changes to This Privacy Policy</strong></p>
+                <p>We may update this Privacy Policy periodically. Any changes will be reflected on this page. We encourage you to review this policy occasionally to stay informed about how we protect your information.</p>
+                
+                <p><strong>Contact</strong></p>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us via LinkedIn.</p>
+                <p>- <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/seulinkedin" target="_blank">Your LinkedIn</a></p>
+                <p>- <strong>GitHub:</strong> <a href="https://github.com/iamrafaelmonteiro/TimeTracker/tree/main" target="_blank">GitHub Repository</a></p>
+                
+            </div>
+            <div class="modal-footer">
+                <p><strong>Last Updated</strong></p>
+                <p>This policy was last updated on June 22, 2024.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
